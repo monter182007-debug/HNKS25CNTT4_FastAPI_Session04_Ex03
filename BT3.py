@@ -11,7 +11,7 @@ products = [
 ]
 
 @app.get("/products")
-def search_products(keyword: Optional[str] = None, max_price: Optional[float] = None):
+def search_products(keyword: str = None, max_price:str = None):
     
     if max_price is not None and max_price < 0:
         return {"detail": "max_price không được âm"}
